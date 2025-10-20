@@ -1,0 +1,166 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f8f9fc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* LOGIN SCREEN */
+#login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+.login-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  text-align: center;
+}
+.login-box input {
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.login-box button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #4b6cb7, #182848);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-box button:hover {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+#error-msg {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* PORTFOLIO */
+.hidden { display: none; }
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #6a11cb;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #6a11cb, 0 0 35px #2575fc;
+}
+h1 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+h2 {
+  color: #182848;
+  border-left: 5px solid #6a11cb;
+  padding-left: 10px;
+}
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 6px 0;
+}
+.project-card {
+  border: 1px solid #eee;
+  border-left: 5px solid #6a11cb;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fafbff;
+}
+.project-card a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* === AI BACKGROUND EFFECT === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #333;
+  overflow-x: hidden;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  position: relative;
+}
+
+/* glowing animated gradient overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #6a11cb,
+    #2575fc,
+    #00f2fe,
+    #6a11cb
+  );
+  animation: rotateLight 15s linear infinite;
+  opacity: 0.15;
+  z-index: -2;
+}
+
+/* subtle network lines for AI theme */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* animation for light rotation */
+@keyframes rotateLight {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
